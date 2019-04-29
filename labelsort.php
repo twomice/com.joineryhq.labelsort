@@ -7,6 +7,8 @@ use CRM_Labelsort_ExtensionUtil as E;
 /**
  * Implements hook_civicrm_alterMailingLabelRows().
  *
+ * @link https://github.com/twomice/com.joineryhq.labelsort/blob/master/README.md
+ *
  * @param Array $rows The rows that will be used to build mailing labels, in
  *    their default sorting order; each row is an array of elements for the
  *    given contact.

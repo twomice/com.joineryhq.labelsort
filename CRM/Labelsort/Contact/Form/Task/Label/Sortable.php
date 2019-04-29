@@ -276,8 +276,9 @@ class CRM_Labelsort_Contact_Form_Task_Label_Sortable extends CRM_Contact_Form_Ta
      */
     // Invoke hook_civicrm_alterMailingLabelRows()
     $null = NULL;
+    $submitValues = $this->_submitValues;
     CRM_Utils_Hook::singleton()->invoke(array('rows', 'formValues'), 
-      $rows, $fv, $null,  $null, $null, $null,
+      $rows, $submitValues, $null,  $null, $null, $null,
       'civicrm_alterMailingLabelRows'
     );
     /*
