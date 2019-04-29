@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<menu>
+  <item>
+    <path>civicrm/task/make-mailing-label</path>
+    <page_callback>CRM_Labelsort_Contact_Form_Task_Label_Sortable</page_callback>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>

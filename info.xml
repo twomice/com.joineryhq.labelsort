@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<extension key="com.joineryhq.labelsort" type="module">
+  <file>labelsort</file>
+  <name>Mailing Label Sort</name>
+  <description>Supports sorting of Mailing Labels by postal code, and provides a hook whereby any extension can add its own custom sorting algorithm.</description>
+  <license>GPL-3.0</license>
+  <maintainer>
+    <author>Allen Shaw</author>
+    <email>allen@JoineryHQ.com</email>
+  </maintainer>
+  <urls>
+    <url desc="Main Extension Page">https://github.com/twomice/com.joineryhq.labelsort/</url>
+    <url desc="Documentation">https://github.com/twomice/com.joineryhq.labelsort/</url>
+    <url desc="Support">https://github.com/twomice/com.joineryhq.labelsort/issues</url>
+    <url desc="Licensing">http://www.gnu.org/licenses/gpl-3.0.html</url>
+  </urls>
+  <releaseDate>2019-04-27</releaseDate>
+  <version>1.0</version>
+  <develStage>alpha</develStage>
+  <compatibility>
+    <ver>5.0</ver>
+  </compatibility>
+  <comments>Adds a new "Sort" field to the "Make Mailing Labels" form; adds an Option Group, "Label Sort"; provides hook_civicrm_alterMailingLabelRows().</comments>
+  <civix>
+    <namespace>CRM/Labelsort</namespace>
+  </civix>
+</extension>
