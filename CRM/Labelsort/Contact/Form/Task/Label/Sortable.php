@@ -1,14 +1,14 @@
 <?php
 /*
  * Copied from CRM_Contact_Form_Task_Label in CiviCRM 5.12.3
- * by Allen Shaw for com.joineryhq.labelsort  Only overridden methods are 
+ * by Allen Shaw for com.joineryhq.labelsort  Only overridden methods are
  * included in this class.
  *
  * Mofications are bookended with comments:
  * "BEGIN MODIFICATION for com.joineryhq.labelsort"
  * and
  * "END MODIFICATION for com.joineryhq.labelsort"
- * 
+ *
  +--------------------------------------------------------------------+
  | CiviCRM version 5                                                  |
  +--------------------------------------------------------------------+
@@ -51,10 +51,11 @@ class CRM_Labelsort_Contact_Form_Task_Label_Sortable extends CRM_Contact_Form_Ta
   public function preProcess() {
     parent::preProcess();
   }
+
   public function getTemplateFileName() {
     return 'CRM/Contact/Form/Task/Label.tpl';
   }
-  
+
   /**
    * Process the form after the input has been submitted and validated.
    */
@@ -277,8 +278,8 @@ class CRM_Labelsort_Contact_Form_Task_Label_Sortable extends CRM_Contact_Form_Ta
     // Invoke hook_civicrm_alterMailingLabelRows()
     $null = NULL;
     $submitValues = $this->_submitValues;
-    CRM_Utils_Hook::singleton()->invoke(array('rows', 'formValues'), 
-      $rows, $submitValues, $null,  $null, $null, $null,
+    CRM_Utils_Hook::singleton()->invoke(array('rows', 'formValues'),
+      $rows, $submitValues, $null, $null, $null, $null,
       'civicrm_alterMailingLabelRows'
     );
     /*

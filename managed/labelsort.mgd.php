@@ -10,56 +10,55 @@
  * https://civicrm.org/blogs/totten/api-and-art-installation).
  */
 
-return array (
-  array (
+return array(
+  array(
     'name' => 'CRM_Labelsort_OptionGroup_labelsort',
     'entity' => 'OptionGroup',
     'params' =>
-    array (
+    array(
       'version' => 3,
-      "name"=> "labelsort_sort",
-      "title"=> "Label Sort",
-      "is_reserved"=> "1",
-      "is_active"=> "1",
-      "is_locked"=> "0",
-      "data_type"=> "String",
-
+      "name" => "labelsort_sort",
+      "title" => "Label Sort",
+      "is_reserved" => "1",
+      "is_active" => "1",
+      "is_locked" => "0",
+      "data_type" => "String",
     ),
   ),
-  array (
+  array(
     'name' => 'CRM_Labelsort_OptionValue_labelsort_name',
     'entity' => 'OptionValue',
     'params' =>
-    array (
+    array(
       'version' => 3,
-      "option_group_id"=> "labelsort_sort",
-      "label"=> "CiviCRM default sort",
-      "value"=> "name",
-      "name"=> "default",
-      "filter"=> "0",
-      "is_default"=> "1",
-      "weight"=> "0",
-      "is_optgroup"=> "0",
-      "is_reserved"=> "1",
-      "is_active"=> "1",
+      "option_group_id" => "labelsort_sort",
+      "label" => "CiviCRM default sort",
+      "value" => "name",
+      "name" => "default",
+      "filter" => "0",
+      "is_default" => "1",
+      "weight" => "0",
+      "is_optgroup" => "0",
+      "is_reserved" => "1",
+      "is_active" => "1",
     ),
   ),
-  array (
+  array(
     'name' => 'CRM_Labelsort_OptionValue_labelsort_postalcode',
     'entity' => 'OptionValue',
     'params' =>
-    array (
+    array(
       'version' => 3,
-      "option_group_id"=> "labelsort_sort",
-      "label"=> "Postal Code",
-      "value"=> "postalcode",
-      "name"=> "postal_code",
-      "filter"=> "0",
-      "is_default"=> "0",
-      "weight"=> "0",
-      "is_optgroup"=> "0",
-      "is_reserved"=> "1",
-      "is_active"=> "1",
+      "option_group_id" => "labelsort_sort",
+      "label" => "Postal Code",
+      "value" => "postalcode",
+      "name" => "postal_code",
+      "filter" => "0",
+      "is_default" => "0",
+      "weight" => "0",
+      "is_optgroup" => "0",
+      "is_reserved" => "1",
+      "is_active" => "1",
     ),
   ),
 );
