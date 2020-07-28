@@ -3,17 +3,11 @@
 require_once 'labelsort.civix.php';
 use CRM_Labelsort_ExtensionUtil as E;
 
-
 /**
  * Implements hook_civicrm_alterMailingLabelRows().
  *
  * @link https://github.com/twomice/com.joineryhq.labelsort/blob/master/README.md
  *
- * @param Array $rows The rows that will be used to build mailing labels, in
- *    their default sorting order; each row is an array of elements for the
- *    given contact.
- * @param type $formValues The form values submitted in the "Make Mailing Labels" form.
- * @return void
  */
 function labelsort_civicrm_alterMailingLabelRows(&$rows, $formValues) {
   // If label_sort isn't defined, there's just no sorting to do. Do nothing and
@@ -36,7 +30,7 @@ function labelsort_civicrm_alterMailingLabelRows(&$rows, $formValues) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_searchTasks().
  */
-function labelsort_civicrm_searchTasks( $objectType, &$tasks ) {
+function labelsort_civicrm_searchTasks($objectType, &$tasks) {
   // For the "Create Mailing Labels" search task, redirect it to our overridden
   // copy of CRM_Labelsort_Contact_Form_Task_Label.
   if (!empty($tasks[CRM_Contact_Task::LABEL_CONTACTS])) {
@@ -65,7 +59,7 @@ function labelsort_civicrm_buildForm($formName, &$form) {
         'limit' => 0,
       ),
     ));
-    foreach($result['values'] as $value) {
+    foreach ($result['values'] as $value) {
       $sortOptions[$value['value']] = E::ts($value['label']);
     }
     // Create the "Sort" form field.
@@ -73,7 +67,7 @@ function labelsort_civicrm_buildForm($formName, &$form) {
 
     // Add "Sort" field to bhfe elements, and assign those fields to the template.
     $tpl = CRM_Core_Smarty::singleton();
-    $bhfe = (array)$tpl->get_template_vars('beginHookFormElements');
+    $bhfe = (array) $tpl->get_template_vars('beginHookFormElements');
     $bhfe[] = 'labelsort_sort';
     $form->assign('beginHookFormElements', $bhfe);
 
@@ -222,24 +216,24 @@ function labelsort_civicrm_entityTypes(&$entityTypes) {
  * Implements hook_civicrm_preProcess().
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_preProcess
- *
-function labelsort_civicrm_preProcess($formName, &$form) {
+ */
+// function labelsort_civicrm_preProcess($formName, &$form) {
 
-} // */
+// }
 
 /**
  * Implements hook_civicrm_navigationMenu().
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_navigationMenu
- *
-function labelsort_civicrm_navigationMenu(&$menu) {
-  _labelsort_civix_insert_navigation_menu($menu, 'Mailings', array(
-    'label' => E::ts('New subliminal message'),
-    'name' => 'mailing_subliminal_message',
-    'url' => 'civicrm/mailing/subliminal',
-    'permission' => 'access CiviMail',
-    'operator' => 'OR',
-    'separator' => 0,
-  ));
-  _labelsort_civix_navigationMenu($menu);
-} // */
+ */
+// function labelsort_civicrm_navigationMenu(&$menu) {
+//   _labelsort_civix_insert_navigation_menu($menu, 'Mailings', array(
+//     'label' => E::ts('New subliminal message'),
+//     'name' => 'mailing_subliminal_message',
+//     'url' => 'civicrm/mailing/subliminal',
+//     'permission' => 'access CiviMail',
+//     'operator' => 'OR',
+//     'separator' => 0,
+//   ));
+//   _labelsort_civix_navigationMenu($menu);
+// }
