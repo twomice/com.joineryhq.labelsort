@@ -48,8 +48,9 @@ Extension authors wishing to provide additional sort options may do so:
 * Implement hook_civicrm_alterMailingLabelRows() to provide sort handling for your
   custom sort options. See the implementation in labelsort.php as an example.
 
-## Issues and support
+## Support
+![screenshot](/images/joinery-logo.png)
 
-Please report any issues or support requests at https://github.com/twomice/com.joineryhq.labelsort/issues
-The author will provide support as time and interest allow. For time-sensitive or
-private support on a paid basis, please contact the author at allen@joineryhq.com.
+Joinery provides services for CiviCRM including custom extension development, training, data migrations, and more. We aim to keep this extension in good working order, and will do our best to respond appropriately to issues reported on its [github issue queue](https://github.com/twomice/com.joineryhq.labelsort/issues). In addition, if you require urgent or highly customized improvements to this extension, we may suggest conducting a fee-based project under our standard commercial terms.  In any case, the place to start is the [github issue queue](https://github.com/twomice/com.joineryhq.labelsort/issues) -- let us hear what you need and we'll be glad to help however we can.
+
+And, if you need help with any other aspect of CiviCRM -- from hosting to custom development to strategic consultation and more -- please contact us directly via https://joineryhq.com
