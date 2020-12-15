@@ -35,7 +35,7 @@ function labelsort_civicrm_searchTasks($objectType, &$tasks) {
   // copy of CRM_Labelsort_Contact_Form_Task_Label.
   if (!empty($tasks[CRM_Contact_Task::LABEL_CONTACTS])) {
     $tasks[CRM_Contact_Task::LABEL_CONTACTS] = array(
-      'title' => ts('Mailing labels - print'),
+      'title' => E::ts('Mailing labels - print'),
       'class' => 'CRM_Labelsort_Contact_Form_Task_Label_Sortable',
       'result' => TRUE,
       'url' => 'civicrm/task/make-mailing-label',
@@ -63,7 +63,7 @@ function labelsort_civicrm_buildForm($formName, &$form) {
       $sortOptions[$value['value']] = E::ts($value['label']);
     }
     // Create the "Sort" form field.
-    $form->add('select', 'labelsort_sort', ts('Sort by'), $sortOptions);
+    $form->add('select', 'labelsort_sort', E::ts('Sort by'), $sortOptions);
 
     // Add "Sort" field to bhfe elements, and assign those fields to the template.
     $tpl = CRM_Core_Smarty::singleton();
