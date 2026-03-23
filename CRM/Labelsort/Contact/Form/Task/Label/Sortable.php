@@ -59,7 +59,7 @@ class CRM_Labelsort_Contact_Form_Task_Label_Sortable extends CRM_Contact_Form_Ta
   /**
    * Process the form after the input has been submitted and validated.
    */
-  public function postProcess() {
+  public function postProcess() : void {
     $fv = $this->controller->exportValues($this->_name);
     $config = CRM_Core_Config::singleton();
     $locName = NULL;
@@ -195,7 +195,7 @@ class CRM_Labelsort_Contact_Form_Task_Label_Sortable extends CRM_Contact_Form_Ta
       $contact = CRM_Utils_Array::value($value, $details['0']);
 
       if (is_a($contact, 'CRM_Core_Error')) {
-        return NULL;
+        return;
       }
 
       // we need to remove all the "_id"
